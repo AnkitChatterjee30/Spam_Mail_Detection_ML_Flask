@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Mail Result</title>
+</head>
+<style>
+    body{
+        background-color: lightcoral;
+    }
+    
+    .Para {
+        margin-left: -160px;
+        position: absolute;
+    }
+
+    .qwe {
+        width: 370px;
+        height: 280px;
+        margin-top: 120px;
+        margin-left: 270px;
+    }
+
+    .qwa {
+        width: 360px;
+        height: 350px;
+        margin-top: 120px;
+        margin-left: 300px;
+    }
+
+    .igloo {
+        font-size: 45px;
+        margin-left: 320px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .igloo {
+            margin-left: 160px;
+            font-size: 30px;
+        }
+
+        .qwe {
+            width: 240px;
+            height: 190px;
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+
+        .qwa {
+            width: 200px;
+            height: 190px;
+            margin-top: 40px;
+            margin-left: 30px;
+        }
+    }
+    @media only screen and (max-width: 1100px) and (min-width:600px) {
+        .igloo {
+            margin-left: 160px;
+            font-size: 30px;
+        }
+
+        .qwe {
+            width: 250px;
+            height: 210px;
+            margin-top: 40px;
+            margin-left: 50px;
+        }
+
+        .qwa {
+            width: 250px;
+            height: 210px;
+            margin-top: 40px;
+            margin-left: 50px;
+        }
+    }
+</style>
+<body>
+    <div class="Para">
+        <br>
+        {% if p==1 %}
+        <p class="igloo">
+            <img src="static/Happy.png" class="qwe" alt="">
+            <br>
+            This is a normal mail.
+        </p>
+        {% endif %}
+    </div>
+    <div class="Para">
+        {% if p==0 %}
+        <p class="igloo">
+            <img src="static/Spam.png" class="qwa" alt="">
+            <br>
+           This is a Spam Mail.
+        </p>
+        {% endif %}
+        </h1>
+    </div>
+        
+</body>
+</html>
